@@ -1,0 +1,148 @@
+{
+  "project_info": {
+    "project_number": "777976348360",
+    "firebase_url": "https://traveler-4e98c.firebaseio.com",
+    "project_id": "traveler-4e98c",
+    "storage_bucket": "traveler-4e98c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777976348360:android:a578efb732a68865",
+        "android_client_info": {
+          "package_name": "com.G31.TravelerP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777976348360-jmddcm4b52cntb2j6l7f47t4ctrdme4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.G31.TravelerP",
+            "certificate_hash": "71f91777cf9b8d4b893f43122d3ef17588f1701e"
+          }
+        },
+        {
+          "client_id": "777976348360-fgo73nk09tms9timvp97loboec5gjga8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8sK2h-Sb05tDabbUHN_UiZ4v7vhMDjR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777976348360-802uakjt7ch8ffrvthpto7innvg4t5io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777976348360:android:2c3ab7c54b4a94f5",
+        "android_client_info": {
+          "package_name": "com.Traveler.G31"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777976348360-fgo73nk09tms9timvp97loboec5gjga8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8sK2h-Sb05tDabbUHN_UiZ4v7vhMDjR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777976348360:android:63ad1abd948be969",
+        "android_client_info": {
+          "package_name": "com.traveler.project101"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777976348360-fgo73nk09tms9timvp97loboec5gjga8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8sK2h-Sb05tDabbUHN_UiZ4v7vhMDjR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777976348360:android:7a2e02e85904b6fd",
+        "android_client_info": {
+          "package_name": "com.yusufolokoba.pedometer10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777976348360-fgo73nk09tms9timvp97loboec5gjga8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8sK2h-Sb05tDabbUHN_UiZ4v7vhMDjR8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
