@@ -22,7 +22,10 @@ public class SceneControl : RootControl
     public GameObject BtnLock;
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
 
     // Use this for initialization
     void Start()
@@ -87,7 +90,10 @@ public class SceneControl : RootControl
 
     public void DecreaseMoney()
     {
+<<<<<<< HEAD
+=======
 
+>>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
 
         if (numMoney >= 10)
         {
@@ -96,7 +102,11 @@ public class SceneControl : RootControl
             reference.Child("User/" + RootName).Child("Money").SetValueAsync(numMoney);
             Destroy(BtnCity);
         }
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
         Destroy(BtnLock);
     }
 }

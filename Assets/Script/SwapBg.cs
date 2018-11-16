@@ -22,6 +22,7 @@
         int stepmapBg;
         public int state =0;
         int Round = 0;
+        int gender;
         Scene sceneM;
 
         //
