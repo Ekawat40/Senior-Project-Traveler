@@ -173,8 +173,6 @@ public class mainControl : RootControl
                 }
             }
         }
-<<<<<<< HEAD
-
 
        
     }
@@ -191,11 +189,6 @@ public class mainControl : RootControl
     public void UpdateValue()
     {
         
-
-    }
-}
-=======
->>>>>>> master
 
     }
 }

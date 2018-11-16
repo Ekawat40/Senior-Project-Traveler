@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F34CEC89-1279-CA7E-F7E6-41225D393FD5}</ProjectGuid>
+    <ProjectGuid>{A235B05F-8182-2962-5A52-2DEFABB73CBD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -77,6 +77,7 @@
     <Compile Include="Assets\Script\EmailSend.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\CountryMap.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
+    <Compile Include="Assets\Script\loadingScene.cs" />
     <Compile Include="Assets\Script\LoadScene.cs" />
     <Compile Include="Assets\Script\LoadSceneControl.cs" />
     <Compile Include="Assets\Script\Login\AuthGame.cs" />
@@ -89,33 +90,39 @@
     <Compile Include="Assets\Script\saveLocation.cs" />
     <Compile Include="Assets\Script\SceneControl.cs" />
     <Compile Include="Assets\Script\SceneController.cs" />
+    <Compile Include="Assets\Script\Sceneloading.cs" />
     <Compile Include="Assets\Script\SendSc.cs" />
     <Compile Include="Assets\Script\SessionLoadScene.cs" />
     <Compile Include="Assets\Script\SessionRoot.cs" />
     <Compile Include="Assets\Script\Slot.cs" />
     <Compile Include="Assets\Script\SwapBg.cs" />
+    <Compile Include="Assets\Script\test123.cs" />
     <Compile Include="Assets\Script\TestSc.cs" />
     <Compile Include="Assets\Script\testSplit.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <Compile Include="Assets\SSTools\Scripts\SSTools.cs" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Baloo\OFL.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Passion_One\OFL.txt" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\Firebase\Plugins\Http\link.xml" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Changa_One\OFL.txt" />
+    <None Include="Assets\PSD Logo Templates\Fonts\Lilita_One\OFL.txt" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -295,7 +302,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -316,31 +323,31 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Analytics">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.App">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Auth">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Platform">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Google.MiniJson">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
     </Reference>
     <Reference Include="Google.Sharpen">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Database">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Compat">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tasks">
-      <HintPath>C:/Users/user/Documents/GitHub/Senior_Project-Traveler/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+      <HintPath>C:/Users/user/Desktop/Traveler-DDay/Senior-Project-Traveler/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/user/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

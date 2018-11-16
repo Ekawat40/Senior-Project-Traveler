@@ -11,7 +11,7 @@ public class SceneControl : RootControl
 {
 
     public GameObject Panel;
-<<<<<<< HEAD
+
 
     public GameObject BtnCity;
     string i;
@@ -21,9 +21,7 @@ public class SceneControl : RootControl
 
     public GameObject BtnLock;
 
-=======
-    public GameObject BtnLock;
->>>>>>> master
+
 
     // Use this for initialization
     void Start()
@@ -88,7 +86,6 @@ public class SceneControl : RootControl
 
     public void DecreaseMoney()
     {
-<<<<<<< HEAD
 
         if (numMoney >= 10)
         {
@@ -98,8 +95,6 @@ public class SceneControl : RootControl
             Destroy(BtnCity);
         }
         
-=======
->>>>>>> master
         Destroy(BtnLock);
     }
 }

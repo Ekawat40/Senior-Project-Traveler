@@ -21,6 +21,7 @@
         private int num,num2, numBg, numMoney,numC=0;
         public int state ;
         int Round = 0;
+        int gender;
         Scene sceneM;
 
         //
