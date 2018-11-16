@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Aekkawat/Desktop/test125.apk
+C:/Users/Aekkawat/Desktop/test126.apk
 SceneListBegin?
 Assets/Scenes/LogoStart.unity
 Assets/Scenes/Login.unity

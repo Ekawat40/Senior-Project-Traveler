@@ -92,7 +92,6 @@ public class ChangeAppearances : MonoBehaviour {
         //var refPush = reference.Child("User"+ RootName).Push();
         //refPush.Child("Username").SetValueAsync(""+username.text);
         reference.Child("User/" + RootName).Child("Skincolor").SetValueAsync(whatColor);
-        reference.Child("User/" + RootName).Child("Skincolor").SetValueAsync(whatColor);
         reference.Child("User/" + RootName).Child("Gender").SetValueAsync(gender);
         reference.Child("User/" + RootName).Child("ClothId").SetValueAsync(clothId);
         reference.Child("User/" + RootName).Child("HairId").SetValueAsync(hairId);

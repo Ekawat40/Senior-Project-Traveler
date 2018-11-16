@@ -1,4 +1,24 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DressupBoy.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/DecorateCity2.1.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/DecorateCity2.2.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/DecorateCity2.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/CreateGirlCharacter.unity
+=======
+- path: Assets/Scenes/MapCountry.unity
+>>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
+>>>>>>> 9fba7673de8625122427a63c6c6bcac1d3a69cb3
+>>>>>>> 2e2143a7e3f08c7e207c9f4b9dbdca1f385f3c4d
+>>>>>>> 14e228a0f82a5d5a6be0061da7b3d82955147234
+>>>>>>> 7b76e3e31bc71e0fbb6f114273eaab5376bea7ba
   isLoaded: 1
   isActive: 1
