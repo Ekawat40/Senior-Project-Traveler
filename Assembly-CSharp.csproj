@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\ChangeBg.cs" />
     <Compile Include="Assets\Script\DragHandeler.cs" />
     <Compile Include="Assets\Script\EmailSend.cs" />
+    <Compile Include="Assets\Script\HideButton.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\CountryMap.cs" />
     <Compile Include="Assets\Script\LevelUnlockScripts\MainManuControlScript.cs" />
     <Compile Include="Assets\Script\loadingScene.cs" />

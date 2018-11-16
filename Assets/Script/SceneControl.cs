@@ -22,7 +22,10 @@ public class SceneControl : RootControl
     public GameObject BtnLock;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 14e228a0f82a5d5a6be0061da7b3d82955147234
 
     // Use this for initialization
     void Start()
@@ -54,10 +57,13 @@ public class SceneControl : RootControl
 
 
         Panel.SetActive(false);
+       
     }
     public void changePanelState(bool state)
     {
         Panel.SetActive(state);
+       
+
     }
 	
 	// Update is called once per frame
@@ -97,6 +103,10 @@ public class SceneControl : RootControl
             Destroy(BtnCity);
         }
 
+<<<<<<< HEAD
         //Destroy(BtnLock);
+=======
+        Destroy(BtnLock);
+>>>>>>> 14e228a0f82a5d5a6be0061da7b3d82955147234
     }
 }
