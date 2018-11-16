@@ -12,8 +12,8 @@ public class CountryMap : SwapBg
 {
 
     private DatabaseReference reference;
-    string i;
-    int num;
+    string country;
+    int numberC;
     // public Button level02Button, level03Button;
 
     [SerializeField]
@@ -82,8 +82,8 @@ public class CountryMap : SwapBg
         else if (task.IsCompleted)
         {
             DataSnapshot snapshot = task.Result;
-                i = snapshot.GetRawJsonValue();
-                num = int.Parse(i);
+                country = snapshot.GetRawJsonValue();
+                numberC = int.Parse(country);
                     }
         });
 
@@ -130,12 +130,12 @@ public class CountryMap : SwapBg
             Destroy(btnDes2);
         }*/
 
-        if (num == 1)
+        if (numberC == 1)
         {
             Destroy(btnDes1);
         }
 
-        if (num == 2)
+        if (numberC == 2)
         {
             Destroy(btnDes1);
             Destroy(btnDes2);
