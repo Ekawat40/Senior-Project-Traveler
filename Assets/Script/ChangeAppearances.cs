@@ -26,7 +26,7 @@ public class ChangeAppearances : MonoBehaviour {
     //
     public InputField email_input;
     public String RootName;
-    public Text showEmail;
+   // public Text showEmail;
     String saveEmail;
 
 
@@ -171,7 +171,7 @@ public class ChangeAppearances : MonoBehaviour {
         {
             //do something
         }
-        showEmail.text = RootName;
+       // showEmail.text = RootName;
         Debug.Log(RootName);
     }
 
