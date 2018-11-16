@@ -29,7 +29,6 @@
         private DatabaseReference reference;
         public int temp;
         string i,j,c,g,m;
-        int gender;
 
 
         private void Start()

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using Firebase;
 using Firebase.Database;
 using Firebase.Unity.Editor;
-using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 
 
 public class mainControl : RootControl
@@ -33,7 +35,7 @@ public class mainControl : RootControl
         //FirebaseApp.DefaultInstance.SetEditorAuthUserId(uId); 
         //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveller-c316a.firebaseio.com/");
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://traveler-4e98c.firebaseio.com/");
-
+        reference = FirebaseDatabase.DefaultInstance.RootReference;
         FirebaseDatabase.DefaultInstance
     //.GetReference("User/-LQ7HR3MZlLsh_dWueW1/Skincolor") //แทน key ด้วย uId 
     .GetReference("User/" + RootName + "/Skincolor")
@@ -173,27 +175,28 @@ public class mainControl : RootControl
                 }
             }
         }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
 
        
     }
 
-        public void ChangeCloth(int cId)
+    public void ChangeCloth(int cId)
     {
         clothId = cId;
+        Debug.Log("clothId : " + clothId);
     }
+
     public void ChangeHair(int hId)
     {
         hairId = hId;
+        Debug.Log("hairId : " + hairId);
     }
- 
+
     public void UpdateValue()
     {
-        
+        Debug.Log("RootName : " + RootName);
+        reference.Child("User/" + RootName).Child("ClothId").SetValueAsync(clothId);
+        reference.Child("User/" + RootName).Child("HairId").SetValueAsync(hairId);
 
     }
+
 }

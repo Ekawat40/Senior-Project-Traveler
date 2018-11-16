@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/DecorateCity2.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/CreateGirlCharacter.unity
-=======
-- path: Assets/Scenes/MapCountry.unity
->>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
->>>>>>> 9fba7673de8625122427a63c6c6bcac1d3a69cb3
+- path: Assets/Scenes/DecorateCity2.1.unity
   isLoaded: 1
   isActive: 1

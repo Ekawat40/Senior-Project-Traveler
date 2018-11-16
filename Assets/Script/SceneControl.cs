@@ -22,10 +22,7 @@ public class SceneControl : RootControl
     public GameObject BtnLock;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
 
     // Use this for initialization
     void Start()
@@ -49,7 +46,7 @@ public class SceneControl : RootControl
              DataSnapshot snapshot = task.Result;
              i = snapshot.GetRawJsonValue();
              numMoney = int.Parse(i);
-             stepText.text = numMoney.ToString();
+             //stepText.text = numMoney.ToString();
              
                     }
         });
@@ -90,23 +87,16 @@ public class SceneControl : RootControl
 
     public void DecreaseMoney()
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
 
         if (numMoney >= 10)
         {
             numMoney = int.Parse(i) - 10;
-            stepText.text = numMoney.ToString();
+           // stepText.text = numMoney.ToString();
             reference.Child("User/" + RootName).Child("Money").SetValueAsync(numMoney);
             Destroy(BtnCity);
         }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> ceadc7738d46f3a2d1c635c916fd16aa41ea1bf9
-        Destroy(BtnLock);
+        //Destroy(BtnLock);
     }
 }
