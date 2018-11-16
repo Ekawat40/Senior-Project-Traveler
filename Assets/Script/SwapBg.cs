@@ -18,8 +18,9 @@
         public int index;
         public Text stepText, distanceText, testText,moneyText;
         private Pedometer pedometer;
-        private int num,num2, numBg, numMoney,numC=0;
-        public int state ;
+        private int num,num2, numBg, numMoney,numC=0, numCbg;
+        int stepmapBg;
+        public int state =0;
         int Round = 0;
         int gender;
         Scene sceneM;
@@ -27,7 +28,8 @@
         //
         private DatabaseReference reference;
         public int temp;
-        string i,j,c;
+        string i,j,c,g,m;
+        int gender;
 
 
         private void Start()
@@ -42,7 +44,11 @@
             setName();
             getStepCount();
             getMoney();
-            
+            getGender();
+            getStepMap();
+            Debug.Log("Gender :" + gender);
+
+
 
 
 
@@ -66,6 +72,28 @@
                 num = int.Parse(i) + num;
                 stepText.text = num.ToString();
                
+            }
+        });
+
+        }
+
+        public void getStepMap()
+        {
+            //setName();
+            FirebaseDatabase.DefaultInstance
+        .GetReference("User/" + RootName + "/StepMap")
+        .GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("error");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                m = snapshot.GetRawJsonValue();
+                stepmapBg = int.Parse(m) + stepmapBg;
+
             }
         });
 
@@ -142,8 +170,9 @@
 
             //num = steps;
             numBg = steps+num;
+            numCbg = steps + stepmapBg; 
             numMoney = steps + num2;
-            Round = steps + num;
+            //Round = steps + num;
             //testText.text = numBg.ToString();
             stepText.text = numBg.ToString();
             moneyText.text = numMoney.ToString();
@@ -231,102 +260,113 @@
             if (state == 0)
             {
 
-                if (numBg >= 0 && numBg <= 20)
+                if (numCbg >= 20)
                 {
+                    reference.Child("User/" + RootName).Child("StepMap").SetValueAsync(numCbg);
                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(1);
                 }
             }
             else if (state == 1)
             {
-                if (numBg >= 21 && numBg <= 40)
+                index = 1;
+                part.sprite = options[index];
+                if (numCbg >= 40)
                 {
+                    reference.Child("User/" + RootName).Child("StepMap").SetValueAsync(numCbg);
                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(2);
-                    index++;
-                    part.sprite = options[index];
+
                 }
             }
             else if (state == 2)
             {
-                if (numBg >= 41)
+                index = 2;
+                part.sprite = options[index];
+                if (numCbg >= 41)
                 {
+                    reference.Child("User/" + RootName).Child("StepMap").SetValueAsync(numCbg);
                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(3);
                     index++;
                     part.sprite = options[index];
                 }
             }
+            else if (state == 3)
+            {
+                index=3;
+                part.sprite = options[index];
+            }
 
 
 
-            
 
-            /* if (state == 0)
-             {
 
-                 if (Round >= 20)
+                /* if (state == 0)
                  {
-                     Round = Round - 20;
-                     index++;
-                     state = 1;
-                     part.sprite = options[index];
-                     Round = 20;
-                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(1);
-                 }
-                 //Round = 20;
-             }
-             else if (state == 1)
-             {
-                 if (Round >= 40)
-                 {
-                     Round = Round - 40;
-                     index++;
-                     state = 2;
-                     part.sprite = options[index];
-                     Round = 40;
-                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(2);
-                 }
-                // Round = 40;
-             }
-             else if (state == 2)
-             {
-                 if (Round >= 60)
-                 {
-                     Round = Round - 60;
-                     index++;
-                     state = 3;
-                     part.sprite = options[index];
-                     Round = 60;
-                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(2);
-                 }
-                // Round = 60;
-             }
-             else if (state == 3)
-             {
-                 if (Round >= 80)
-                 {
-                     Round = Round - 80;
-                     index++;
-                     state = 4;
-                     part.sprite = options[index];
-                     Round = 80;
-                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(3);
-                 }
-                 //Round = 80;
-             }
-             else if (state == 4)
-             {
-                 if (Round >= 100)
-                 {
-                     Round = Round - 100;
-                     index = 0;
-                     state = 0;
-                     part.sprite = options[index];
-                     Round = 0;
-                     reference.Child("User/" + RootName).Child("Country").SetValueAsync(4);
-                 }
-                 //Round = 0;
-             }*/
 
-        }
+                     if (Round >= 20)
+                     {
+                         Round = Round - 20;
+                         index++;
+                         state = 1;
+                         part.sprite = options[index];
+                         Round = 20;
+                         reference.Child("User/" + RootName).Child("Country").SetValueAsync(1);
+                     }
+                     //Round = 20;
+                 }
+                 else if (state == 1)
+                 {
+                     if (Round >= 40)
+                     {
+                         Round = Round - 40;
+                         index++;
+                         state = 2;
+                         part.sprite = options[index];
+                         Round = 40;
+                         reference.Child("User/" + RootName).Child("Country").SetValueAsync(2);
+                     }
+                    // Round = 40;
+                 }
+                 else if (state == 2)
+                 {
+                     if (Round >= 60)
+                     {
+                         Round = Round - 60;
+                         index++;
+                         state = 3;
+                         part.sprite = options[index];
+                         Round = 60;
+                         reference.Child("User/" + RootName).Child("Country").SetValueAsync(2);
+                     }
+                    // Round = 60;
+                 }
+                 else if (state == 3)
+                 {
+                     if (Round >= 80)
+                     {
+                         Round = Round - 80;
+                         index++;
+                         state = 4;
+                         part.sprite = options[index];
+                         Round = 80;
+                         reference.Child("User/" + RootName).Child("Country").SetValueAsync(3);
+                     }
+                     //Round = 80;
+                 }
+                 else if (state == 4)
+                 {
+                     if (Round >= 100)
+                     {
+                         Round = Round - 100;
+                         index = 0;
+                         state = 0;
+                         part.sprite = options[index];
+                         Round = 0;
+                         reference.Child("User/" + RootName).Child("Country").SetValueAsync(4);
+                     }
+                     //Round = 0;
+                 }*/
+
+            }
 
 
         public void btnCity()
@@ -336,6 +376,7 @@
             SaveState();
             reference.Child("User/" + RootName).Child("StepCount").SetValueAsync(numBg);
             reference.Child("User/" + RootName).Child("Money").SetValueAsync(numMoney);
+            reference.Child("User/" + RootName).Child("StepMap").SetValueAsync(numCbg);
             SceneManager.LoadScene("MapCountry");
         }
         public void btnShop()
@@ -348,8 +389,32 @@
             SceneManager.LoadScene("Main_1");
         }
 
+        public void getGender()
+        {
+            //setName();
+            FirebaseDatabase.DefaultInstance
+        .GetReference("User/" + RootName + "/gender")
+        .GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsFaulted)
+            {
+                Debug.Log("error");
+            }
+            else if (task.IsCompleted)
+            {
+                DataSnapshot snapshot = task.Result;
+                g = snapshot.GetRawJsonValue();
+                gender = int.Parse(g) ;
+                // SSTools.ShowMessage("StepCount" + num, SSTools.Position.bottom, SSTools.Time.twoSecond);
+            }
+        });
+
+        }
+
         public void btnDressUp()
         {
+
+
             if (gender == 0)
             {
                 SceneManager.LoadScene("DressupGirl");
